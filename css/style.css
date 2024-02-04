@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #a9e190;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    background-color: pink;
+}
+
+.dino{
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 22px;
+    z-index: 2;
+    background: url(../img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+
+.dino-running{
+    animation: animationDino 0.25s steps(2) infinite;
+}
+
+.dino-crash{
+    background-position-x: -252px;
+}
+
+.floor{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../img/floor.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+    color: #d90368;
+    font-family: Verdana;
+    font-size: 30px;
+    text-align: right;
+}
+
+@keyframes animationDino{
+    from{
+        background-position: -84px;
+    }
+    to{
+        background-position: -252px;
+    }
+}
