@@ -15,7 +15,21 @@ body{
     height: 280px;
     margin: 0 auto;
     position: relative;
-    background-color: pink;
+    background: linear-gradient(#71ceeb, transparent) #ffe2d1;
+    transition: background-color 1s linear;
+    overflow: hidden;
+}
+
+.noon {
+    background-color: #ffdcf3;
+}
+
+.afternoon {
+    background-color: #ffadad;
+}
+
+.night {
+    background-color: #5645c4;
 }
 
 .dino{
@@ -47,6 +61,30 @@ body{
     background-size: 50% 42px;
 }
 
+.cactus{
+    width: 46px;
+    height: 96px;
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+    background: url(../img/cactus1.png) no-repeat;
+}
+.cactus2{
+    width: 98px;
+    height: 66px;
+    background: url(../img/cactus2.png) no-repeat;
+}
+
+.cloud{
+    width: 92px;
+    height: 26px;
+    position: absolute;
+    z-index: 0;
+    background: url(../img/cloud.png) no-repeat;
+    background-size: 92px 26px;
+}
+
 .score{
     width: 100px;
     height: 30px;
@@ -58,6 +96,17 @@ body{
     font-family: Verdana;
     font-size: 30px;
     text-align: right;
+}
+
+.game-over{
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #7e928b;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
 }
 
 @keyframes animationDino{
